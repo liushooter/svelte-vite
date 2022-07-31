@@ -21,11 +21,11 @@
 
 
 <div class="list-group list-group-checkable d-grid gap-2 border-0 w-auto">
-
-  {#each posts as post}
   <div>
     <p></p>
   </div>
+
+  {#each posts as post}
   <label class="list-group-item rounded-3 py-3">
     {post.title}
     <span class="small opacity-50">{post.time}</span>
