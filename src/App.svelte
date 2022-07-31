@@ -2,8 +2,8 @@
   import { Router, Route, Link } from "svelte-navigator";
 
   import svelteLogo from './assets/svelte.svg'
-  import Counter from './lib/Counter.svelte'
   import Daily from './lib/web3daily.svelte'
+  import Jobs from './lib/jobs.svelte'
 </script>
 
 <div class="container">
@@ -31,10 +31,14 @@
     <Route path="web3daily">
       <Daily />
     </Route>
+
+    <Route path="jobs">
+      <Jobs />
+    </Route>
   </Router>
 
   <!--  -->
-  <h1>Hello, Bootstrap and Webpack!</h1>
+  <h1>Hello, Bootstrap and svelte!</h1>
   <button class="btn btn-primary">Primary button</button>
 
   <div class="">
