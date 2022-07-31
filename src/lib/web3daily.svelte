@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
   // const endpoint = "https://jsonplaceholder.typicode.com/posts";
-  const url = "http://db.rebase.network/web3daily/public/posts?_order=-id,-time&_page_size=50&_page=1"
+  const url = "http://db.rebase.network/web3daily/public/posts?_order=-id,-time&_page_size=10&_page=1"
 
   let posts = [];
 
@@ -28,13 +28,12 @@
   </div>
 
   {#each posts as post}
-  <label class="list-group-item rounded-3 py-3">
-    {post.title}
-    <span class="small opacity-50">{post.time}</span>
-    <span class="d-block small opacity-50">{post.url}</span>
-    <p>{post.introduce}</p>
-  </label>
-
+    <div class="list-group-item rounded-3 py-3">
+      {post.title}
+      <span class="small opacity-50">{post.time}</span>
+      <a class="d-block small opacity-50" href="{post.url}">{post.title}</a>
+      <p>{post.author}：{post.introduce}</p>
+    </div>
   {/each}
 
 </div>

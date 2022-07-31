@@ -22,8 +22,6 @@
   <title>Rebase Jobs</title>
 </svelte:head>
 
-<a href="/">Home</a>
-
 <div class="list-group w-auto">
   {#each jobs as item}
     <a href="{item.html_url}" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
